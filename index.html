@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M. V. C. Andre | Academic Portfolio</title>
+<meta name="description" content="Academic portfolio of Maria Valéria de Carvalho André: M.S. student in Industrial and Systems Engineering at Binghamton University. Optimization, simulation, healthcare operations and continuous improvement.">
+<meta property="og:title" content="M. V. C. Andre | Academic Portfolio">
+<meta property="og:description" content="Optimization, simulation and continuous improvement for healthcare and manufacturing systems.">
+<meta property="og:image" content="assets/photo.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23C2255C'/%3E%3Ctext x='32' y='42' font-size='30' font-family='monospace' font-weight='700' text-anchor='middle' fill='white'%3EA_%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>
+:root{
+  --pink:#C2255C; --pink-dark:#8C1A3E; --pink-soft:#FCE4EC; --pink-mid:#F4B6CB;
+  --ink:#2B2B30; --gray:#55555C; --muted:#6B6B73; --line:#E4E4E7; --line-2:#D4D4D8;
+  --bg-soft:#F7F7F8; --bg-chip:#EEEEF0; --white:#FFFFFF;
+  --serif:'Fraunces',Georgia,serif; --sans:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:var(--pink);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--pink);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 32px}
+section{scroll-margin-top:24px}
+
+/* top bar */
+.topbar{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:13px}
+.brand{font-weight:700;font-size:15px;color:var(--ink);letter-spacing:.02em}
+.brand i{font-style:normal;color:var(--pink)}
+.topbar nav{display:flex;flex-wrap:wrap;gap:6px 24px}
+.topbar nav a{color:var(--gray)}
+.topbar nav a:hover{color:var(--pink);text-decoration:none}
+.topbar nav a.cta{color:var(--pink);font-weight:700}
+
+/* hero */
+.hero{display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding:64px 0 56px;background-image:radial-gradient(#D4D4D8 1.2px,transparent 1.2px);background-size:24px 24px;background-position:-12px -12px}
+.hero-text{flex:1 1 520px;min-width:0}
+.tag{display:inline-block;background:var(--white);font-family:var(--mono);font-size:13px;color:var(--pink);font-weight:500;padding:4px 0;margin-bottom:18px}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,6vw,66px);line-height:1.05;margin:0 0 22px;letter-spacing:-.02em;background:var(--white);display:inline-block}
+h1 em{color:var(--pink)}
+.lead{font-size:19px;line-height:1.6;color:var(--gray);margin:0 0 26px;max-width:560px;background:var(--white)}
+.term{background:var(--ink);border-radius:14px;padding:20px 24px;font-family:var(--mono);font-size:13.5px;line-height:1.8;color:#E4E4E7;max-width:540px;margin-bottom:28px;overflow-wrap:anywhere}
+.term .c{color:#A0A0A8}.term .k{color:var(--pink-mid)}.term .v{color:#FFFFFF}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:14px 26px;border-radius:10px;font-weight:600;font-size:15px}
+.btn:hover{text-decoration:none}
+.btn-pink{background:var(--pink);color:#FFFFFF}
+.btn-pink:hover{background:var(--pink-dark)}
+.btn-line{background:var(--white);border:1.5px solid var(--line-2);color:var(--ink);padding:12.5px 26px}
+.btn-line:hover{border-color:var(--pink);color:var(--pink)}
+.hero-art{flex:0 1 420px;width:min(420px,100%);aspect-ratio:420/460;position:relative}
+.hero-art svg{position:absolute;inset:0;width:100%;height:100%}
+.route{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.8s ease-out .3s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.route{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+.hero-art img{position:absolute;left:14.3%;top:10.9%;width:71.4%;height:78.3%;object-fit:cover;object-position:50% 25%;border-radius:20px;border:4px solid var(--white)}
+.badge{position:absolute;left:10.5%;top:81.7%;background:var(--white);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-family:var(--mono);font-size:12px}
+
+/* metrics */
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:8px}
+.metric{border:1px solid var(--line);border-radius:12px;padding:22px;background:var(--bg-soft)}
+.metric .lab{font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:10px}
+.metric .num{font-family:var(--serif);font-size:38px;color:var(--pink);line-height:1}
+.metric .cap{font-size:13px;color:var(--gray);margin-top:8px}
+
+/* sections */
+.block{padding:84px 0 0}
+.eyebrow{font-family:var(--mono);font-size:13px;color:var(--pink);margin-bottom:10px}
+h2{font-family:var(--serif);font-weight:400;font-size:40px;line-height:1.1;margin:0 0 30px}
+h3{font-size:18px;font-weight:600;margin:0 0 8px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.card{border:1px solid var(--line);border-radius:14px;padding:26px}
+.card p{margin:0;font-size:15px;line-height:1.55;color:var(--gray)}
+
+/* rows (experience / projects / publications) */
+.row{display:flex;flex-wrap:wrap;gap:12px 40px;padding:26px 0;border-top:1px solid var(--line)}
+.row:last-of-type{border-bottom:1px solid var(--line)}
+.row .when{flex:0 0 130px;font-family:var(--mono);color:var(--muted);font-size:13px;padding-top:4px}
+.row .body{flex:1 1 480px;min-width:0}
+.row h3{font-size:20px}
+.row p{margin:0 0 12px;font-size:15px;line-height:1.6;color:var(--gray)}
+.row .meta{font-size:13px;color:var(--muted);margin:0 0 10px}
+.row ul{margin:0 0 12px;padding-left:18px;font-size:15px;line-height:1.6;color:var(--gray)}
+.row li{margin-bottom:4px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;font-family:var(--mono);font-size:12px}
+.chips span{background:var(--bg-chip);padding:4px 10px;border-radius:6px}
+.chips span.p{background:var(--pink-soft);color:var(--pink-dark)}
+.more{margin-top:18px;font-size:14px;color:var(--gray)}
+
+/* stack */
+.stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;font-family:var(--mono);font-size:13px}
+.stack>div{background:var(--bg-soft);border:1px solid var(--line);border-radius:12px;padding:20px}
+.stack .t{color:var(--muted);margin-bottom:12px}
+.stack .chips span{background:var(--white);border:1px solid var(--line-2);padding:5px 10px}
+.stack .chips span.p{background:var(--pink-soft);border-color:var(--pink-mid)}
+
+/* publications */
+.sub{font-family:var(--mono);font-size:13px;color:var(--pink);margin:40px 0 6px}
+.pub{display:flex;flex-wrap:wrap;gap:6px 24px;padding:14px 0;border-top:1px solid var(--line);font-size:15px;line-height:1.6;color:var(--gray)}
+.pub:last-child{border-bottom:1px solid var(--line)}
+.pub .y{flex:0 0 56px;font-family:var(--mono);color:var(--pink);font-size:13px;padding-top:2px}
+.pub .t{flex:1 1 440px;min-width:0}
+.pub b{color:var(--ink);font-weight:600}
+details{border:1px solid var(--line);border-radius:12px;padding:0 20px;margin-top:14px;background:var(--bg-soft)}
+details>summary{cursor:pointer;padding:16px 0;font-family:var(--mono);font-size:13px;font-weight:500;color:var(--pink);list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details>summary::before{content:"+ ";font-weight:700}
+details[open]>summary::before{content:"– "}
+details .pub:first-of-type{border-top:1px solid var(--line)}
+
+/* two column (education, awards) */
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}
+.item{padding:0 0 20px 18px;border-left:3px solid var(--pink-mid);margin-bottom:6px}
+.item.g{border-left-color:var(--line-2)}
+.item .h{font-weight:600;font-size:16px}
+.item .s{font-size:14px;color:var(--gray);margin-top:4px;line-height:1.55}
+.list{margin:0;padding:0;list-style:none;font-size:14.5px;line-height:1.5;color:var(--gray)}
+.list li{display:flex;gap:16px;padding:10px 0;border-top:1px solid var(--line)}
+.list li:last-child{border-bottom:1px solid var(--line)}
+.list .d{flex:0 0 96px;font-family:var(--mono);font-size:12px;color:var(--pink);padding-top:2px}
+.list b{color:var(--ink);font-weight:600}
+
+/* contact */
+.contact{margin-top:88px;padding:48px 0 56px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
+.contact .big{font-family:var(--serif);font-size:30px}
+.contact .big i{font-style:normal;color:var(--pink)}
+.links{display:flex;flex-wrap:wrap;gap:24px;font-family:var(--mono);font-size:14px;font-weight:500}
+.foot{padding:0 0 40px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+
+@media (max-width:900px){
+  .metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cols{grid-template-columns:1fr;gap:40px}
+}
+@media (max-width:640px){
+  .wrap{padding:0 20px}
+  .grid2,.stack{grid-template-columns:1fr}
+  .metrics{grid-template-columns:1fr}
+  h2{font-size:32px}
+  .row .when{flex-basis:100%}
+  .hero{padding-top:40px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="topbar">
+  <a class="brand" href="#top" id="top">M. V. C. Andre<i>_</i></a>
+  <nav aria-label="Main">
+    <a href="#research">/research</a>
+    <a href="#experience">/experience</a>
+    <a href="#projects">/projects</a>
+    <a href="#stack">/stack</a>
+    <a href="#publications">/publications</a>
+    <a href="#cv">/cv</a>
+    <a class="cta" href="#contact">/contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" aria-label="Introduction">
+  <div class="hero-text">
+    <div class="tag">// industrial &amp; systems engineering</div><br>
+    <h1>Maria Valéria de Carvalho <em>André</em></h1><br>
+    <p class="lead">Graduate researcher at Binghamton University building optimization, simulation and continuous-improvement models for healthcare and manufacturing systems.</p>
+    <div class="term" aria-label="Research profile">
+      <div class="c">// researcher.profile</div>
+      <div><span class="k">focus</span> = [<span class="v">"optimization"</span>, <span class="v">"simulation"</span>, <span class="v">"lean six sigma"</span>]</div>
+      <div><span class="k">domains</span> = [<span class="v">"healthcare"</span>, <span class="v">"electronics manufacturing"</span>]</div>
+      <div><span class="k">degree</span> = <span class="v">"M.S. ISE, Binghamton University (exp. Aug 2027)"</span></div>
+    </div>
+    <div class="btns">
+      <a class="btn btn-pink" href="assets/CV_Maria_Andre.pdf">Download CV</a>
+      <a class="btn btn-line" href="#projects">View projects</a>
+    </div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 420 460" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+      <polyline class="route" pathLength="1" points="30,60 120,20 230,40 330,15 395,90 380,190 405,290 370,410 260,440 160,420 60,445 20,340 40,230 15,140 30,60" fill="none" stroke="#C2255C" stroke-width="1.6" stroke-opacity=".75"/>
+      <g stroke="#D4D4D8"><line x1="120" y1="20" x2="40" y2="230"/><line x1="230" y1="40" x2="380" y2="190"/><line x1="160" y1="420" x2="405" y2="290"/><line x1="60" y1="445" x2="20" y2="340"/></g>
+      <g fill="#C2255C"><circle cx="30" cy="60" r="5"/><circle cx="120" cy="20" r="4"/><circle cx="230" cy="40" r="5"/><circle cx="330" cy="15" r="4"/><circle cx="395" cy="90" r="5"/><circle cx="380" cy="190" r="4"/><circle cx="405" cy="290" r="5"/><circle cx="370" cy="410" r="4"/><circle cx="260" cy="440" r="5"/><circle cx="160" cy="420" r="4"/><circle cx="60" cy="445" r="5"/><circle cx="20" cy="340" r="4"/><circle cx="40" cy="230" r="5"/><circle cx="15" cy="140" r="4"/></g>
+    </svg>
+    <img src="assets/photo.jpg" alt="Portrait of Maria Valéria de Carvalho André" width="800" height="800">
+    <div class="badge">M.S. ISE · GPA 3.87</div>
+  </div>
+</section>
+
+<!-- METRICS -->
+<section class="metrics" aria-label="Highlights">
+  <div class="metric"><div class="lab">routes.max_nodes</div><div class="num">85,000</div><div class="cap">TSP nodes in 22 min, within ~10% of optimality</div></div>
+  <div class="metric"><div class="lab">dfj.runtime_cut</div><div class="num">~50%</div><div class="cap">median, KNN restriction on 118 TSPLIB instances</div></div>
+  <div class="metric"><div class="lab">lkh.optimality</div><div class="num">93.2%</div><div class="cap">up from 87.2% with KNN restriction</div></div>
+  <div class="metric"><div class="lab">ci.savings</div><div class="num">~$470K</div><div class="cap">from Lean Six Sigma projects at Celestica</div></div>
+</section>
+
+<!-- RESEARCH -->
+<section class="block" id="research">
+  <div class="eyebrow">01 / research</div>
+  <h2>Research interests</h2>
+  <div class="grid2">
+    <div class="card"><h3>Healthcare operations</h3><p>Healthcare access and scheduling, including workforce scheduling and patient access to care.</p></div>
+    <div class="card"><h3>Manufacturing and continuous improvement</h3><p>Lean and Six Sigma integrated with quantitative models.</p></div>
+    <div class="card"><h3>Combinatorial optimization</h3><p>Mixed-integer programming and heuristic methods for large-scale problems.</p></div>
+    <div class="card"><h3>Simulation and decision support</h3><p>Discrete-event simulation and data-driven evaluation of operational policies in healthcare and production systems.</p></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="block" id="experience">
+  <div class="eyebrow">02 / experience</div>
+  <h2>Research and professional experience</h2>
+  <div class="row">
+    <div class="when">Aug 2026 – now</div>
+    <div class="body">
+      <h3>Graduate Research Assistant, Continuous Improvement</h3>
+      <div class="meta">Dept. of ISE, Binghamton University, placed at Celestica Inc.</div>
+      <ul>
+        <li>Lead and support Lean and Six Sigma projects in data center electronics manufacturing (rack assembly, test and cleanroom), with approximately $470,000 in savings.</li>
+        <li>Co-led the cleanroom waste-separation redesign, recognized with Celestica's Best of Site award (August 2026), and supported the redesign of cable kitting into a pull system.</li>
+        <li>Cycle-time studies, root cause analyses, Excel tracking tools and dashboards, 5S audits and hour-by-hour boards for visual management.</li>
+        <li>Developing a discrete-event simulation model (SimPy) to evaluate process configurations under alternative demand scenarios.</li>
+      </ul>
+      <div class="chips"><span class="p">Lean</span><span class="p">Six Sigma</span><span>5S</span><span>SimPy</span><span>Excel</span></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="when">Aug 2025 – Jul 2026</div>
+    <div class="body">
+      <h3>Graduate Research Assistant</h3>
+      <div class="meta">Dept. of ISE, Binghamton University · Advisor: Dr. Sreenath Chalil Madathil</div>
+      <ul>
+        <li>Developed 10 optimization algorithms for large-scale Traveling Salesman Problem (TSP) instances under topological constraints, using mixed-integer programming, topology-based neighborhood reduction, Python and Gurobi.</li>
+        <li>Routes for instances of up to 85,000 nodes in 22 minutes, within approximately 10% of optimality.</li>
+      </ul>
+      <div class="chips"><span class="p">Python</span><span class="p">Gurobi</span><span>MIP</span></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="when">Mar 2021 – Jul 2025</div>
+    <div class="body">
+      <h3>Software Tester (Quality and Usability Testing)</h3>
+      <div class="meta">Di2win Tecnologia LTDA, Salgueiro, PE, Brazil</div>
+      <ul>
+        <li>Quality and usability testing during product development; identified and troubleshot defects to improve reliability and user experience.</li>
+        <li>Co-developer of extrAIdados, a registered software tool for data extraction from documents.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="block" id="projects">
+  <div class="eyebrow">03 / projects</div>
+  <h2>Selected research projects</h2>
+
+  <div class="row"><div class="when">Aug 2025 – 2026</div><div class="body">
+    <h3>KNN-guided candidate restriction for large-scale TSP</h3>
+    <div class="meta">Binghamton University · Advisor: Dr. Sreenath Chalil Madathil</div>
+    <p>Evaluated k-nearest-neighbor candidate restriction across exact and heuristic solvers (DFJ, Concorde, LKH, SOM) on 118 TSPLIB instances with nonparametric statistical tests. The restriction cut median DFJ runtime by about 50% and raised the LKH optimality rate from 87.2% to 93.2%.</p>
+    <div class="chips"><span class="p">Python</span><span class="p">Gurobi</span><span>DFJ</span><span>Concorde</span><span>LKH</span><span>statistical tests</span></div>
+  </div></div>
+
+  <div class="row"><div class="when">2026</div><div class="body">
+    <h3>Continuous improvement in electronics manufacturing (Celestica)</h3>
+    <div class="meta">Binghamton University at Celestica Inc. · Advisor: Dr. Yingge Zhou</div>
+    <p>Cleanroom waste-separation redesign (Best of Site award), cable kitting redesigned from per-rack warehouse carts into a pull system, cycle-time studies, 5S audits, hour-by-hour boards and a SimPy simulation. This work is the basis of my M.S. thesis.</p>
+    <div class="chips"><span class="p">Lean</span><span class="p">Six Sigma</span><span>pull system</span><span>visual management</span><span>SimPy</span></div>
+  </div></div>
+
+  <div class="row"><div class="when">Sep – Dec 2025</div><div class="body">
+    <h3>Simulation and optimization of a garment manufacturing system</h3>
+    <div class="meta">Binghamton University · Advisor: Dr. Sreenath Chalil Madathil</div>
+    <p>Discrete-event simulation in Simio with statistical experiments and OptQuest optimization to evaluate lot-size and reorder-point policies, reducing inventory levels while keeping the fill rate above 80%.</p>
+    <div class="chips"><span class="p">Simio</span><span>OptQuest</span><span>inventory policy</span></div>
+  </div></div>
+
+  <div class="row"><div class="when">Aug 2024 – Dec 2025</div><div class="body">
+    <h3>Student enrollment and retention with simulation and machine learning</h3>
+    <div class="meta">UNIVASF, Brazil · Advisor: Prof. Carlos Jefferson de Melo Santos</div>
+    <p>System to collect student data and predict dropout with machine learning, within a hybrid digital-twin performance measurement framework, with monitoring dashboards. Manuscript under review.</p>
+    <div class="chips"><span class="p">Machine learning</span><span>digital twin</span><span>dashboards</span></div>
+  </div></div>
+
+  <div class="row"><div class="when">Apr – Dec 2024</div><div class="body">
+    <h3>Performance measurement in primary health care with Healthcare 4.0</h3>
+    <div class="meta">UNIVASF, Brazil · PIBEX Extension Scholarship · Advisor: Prof. Carlos Jefferson de Melo Santos</div>
+    <p>Collected and analyzed performance metrics in primary health care units in Salgueiro, PE, and trained staff on technological and occupational health and safety tools. Presented at SCIENTEX 2024 and extended into manuscripts under review.</p>
+    <div class="chips"><span class="p">Healthcare 4.0</span><span>performance metrics</span><span>ergonomics</span></div>
+  </div></div>
+
+  <div class="row"><div class="when">Oct 2022 – Mar 2023</div><div class="body">
+    <h3>Manufacturing process improvement using Lean methods</h3>
+    <div class="meta">UNIVASF, Brazil · Advisor: Prof. Éverton Crístian Rodrigues de Souza</div>
+    <p>Time study and motion economy in a textile company to identify waste and standardize operations. Published in two papers at the 43rd ENEGEP; a related study applied occupational risk mapping in a paint manufacturing plant.</p>
+    <div class="chips"><span class="p">Lean</span><span>time study</span><span>motion economy</span></div>
+  </div></div>
+
+  <div class="row"><div class="when">Aug 2022 – Aug 2023</div><div class="body">
+    <h3>Optimization methods for airport gate assignment</h3>
+    <div class="meta">UNIVASF, Brazil</div>
+    <p>Heuristic algorithm assigning aircraft to boarding gates at Recife International Airport, reducing passenger and baggage transport distance by more than 10,000 km with low computational time. Presented at the 56th Brazilian Operational Research Symposium (SBPO).</p>
+    <div class="chips"><span class="p">Heuristics</span><span>gate assignment</span></div>
+  </div></div>
+
+  <div class="row"><div class="when">Aug 2021 – Aug 2022</div><div class="body">
+    <h3>Evolutionary algorithms for planning and scheduling healthcare resources</h3>
+    <div class="meta">Federal University of Campina Grande, Brazil · Advisor: Prof. Yuri Laio Teixeira Veras Silva</div>
+    <p>Local search heuristic for the nurse assignment problem that incorporates staff preferences and sector specialization, balancing operational efficiency and job satisfaction (34% allocation of nurses to specialized sectors). Published in the Brazilian Journal of Production Engineering and registered as software with Brazil's INPI.</p>
+    <div class="chips"><span class="p">Local search</span><span>nurse assignment</span><span>healthcare</span></div>
+  </div></div>
+
+  <p class="more">Additional projects (2020–2024): collection and reuse of discarded batteries (EcoPilha); ergonomic walker for the elderly; reverse logistics in a social organization; social technologies for greywater reuse in semi-arid areas.</p>
+</section>
+
+<!-- STACK -->
+<section class="block" id="stack">
+  <div class="eyebrow">04 / stack</div>
+  <h2>Tools and methods</h2>
+  <div class="stack">
+    <div><div class="t">continuous_improvement</div><div class="chips"><span class="p">Lean</span><span class="p">Six Sigma Green Belt</span><span>5S</span><span>cycle-time studies</span><span>root cause analysis</span><span>visual management</span><span>pull systems</span><span>statistical quality control</span></div></div>
+    <div><div class="t">optimization</div><div class="chips"><span>Gurobi</span><span>mixed-integer programming</span><span>heuristics</span><span>metaheuristics</span></div></div>
+    <div><div class="t">programming</div><div class="chips"><span>Python</span><span>R</span><span>C++</span><span>VBA</span><span>Jupyter</span><span>LaTeX</span></div></div>
+    <div><div class="t">simulation</div><div class="chips"><span>Simio</span><span>FlexSim</span><span>SimPy</span></div></div>
+    <div><div class="t">statistics_and_analytics</div><div class="chips"><span>Minitab</span><span>R</span><span>ExpertFit</span><span>Orange</span><span>Power BI</span><span>advanced Excel</span></div></div>
+    <div><div class="t">languages</div><div class="chips"><span>Portuguese (native)</span><span>English (professional)</span></div></div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section class="block" id="publications">
+  <div class="eyebrow">05 / publications</div>
+  <h2>Publications</h2>
+
+  <div class="sub">// refereed journal articles</div>
+  <div class="pub"><span class="y">2025</span><span class="t">André, M. V. de C., Alves, J. T. de S., Pereira, G. M., Oliveira, D. R. S. B., Rodrigues, T. N., Albuquerque, C. E. da S., &amp; Rocha, L. O. (2025). <b>Promoting sustainability and social responsibility through the collection, sorting, reuse and proper disposal of discarded batteries.</b> <i>Experiência. Revista Científica de Extensão</i>, 11, e88888. (In Portuguese)</span></div>
+  <div class="pub"><span class="y">2025</span><span class="t">Silva, H. L. R., André, M. V. C., Silva, Y. L. T. V., &amp; Silva, N. E. F. (2025). <b>Application of computational optimization tools in human resource management in hospital networks: Evolution and trends.</b> <i>Revista Exacta</i>. (In Portuguese)</span></div>
+  <div class="pub"><span class="y">2024</span><span class="t">André, M. V. de C., Silva, H. L. R. da, &amp; Silva, Y. L. T. V. (2024). <b>A local search heuristic for nurse assignment problems with personal preferences.</b> <i>Brazilian Journal of Production Engineering</i>, 10(2), 70–81.</span></div>
+  <div class="pub"><span class="y">2024</span><span class="t">André, M. V. de C., &amp; Oliveira-Melo, F. G. (2024). <b>Reference model for the development of social technologies.</b> <i>Journal of Social and Environmental Management</i>, 18(4), e04670.</span></div>
+
+  <div class="sub">// manuscripts under review or in revision</div>
+  <div class="pub"><span class="y">rev.</span><span class="t">André, M. V. C., Sekar, K. T. A., Balamurugan, R., Kaliswamy, K., &amp; Madathil, S. C. <b>Impact of KNN candidate restriction on exact and heuristic TSP solvers.</b> (In revision)</span></div>
+  <div class="pub"><span class="y">rev.</span><span class="t">Sekar, K. T. A., André, M. V. C., Balamurugan, R., Kaliswamy, K., &amp; Madathil, S. C. <b>A geometry-informed penalty layer for consistent TSP solver acceleration and optimality.</b></span></div>
+  <div class="pub"><span class="y">rev.</span><span class="t">André, M. V. de C., Alves, J. T. de S., Silva, L. M., Pereira, G. M., Moises, G. C. C., Cavalcanti, I. A., Morais, P. S. S., &amp; Santos, C. J. de M. <b>Hybrid digital twin framework in performance measurement systems: A model proposal for sustainable Education 5.0.</b></span></div>
+  <div class="pub"><span class="y">rev.</span><span class="t">Santos, C. J. de M., Morais, P. S. S., Silva, D. V. da, André, M. V. C., Barbosa, A. S., &amp; Sant’Anna, A. M. O. <b>Hybrid model of digital twins and queueing theory for efficient management of dengue in public health.</b></span></div>
+  <div class="pub"><span class="y">rev.</span><span class="t">Santos, C. J. de M., André, M. V. C., Barbosa, A. S., &amp; Sant’Anna, A. M. O. <b>From performance measurement systems to situated performance infrastructure: Co-producing public performance in Brazilian primary health care.</b></span></div>
+  <div class="pub"><span class="y">rev.</span><span class="t">Santos, C. J. M., Lima, T. G. E., &amp; André, M. V. C. <b>The institutional reflexivity gap: Algorithmic agency and uneven technology–institution coevolution in AI ecosystems.</b></span></div>
+
+  <details>
+    <summary>Conference proceedings (9)</summary>
+    <div class="pub"><span class="y">2026</span><span class="t">Santos, C. J. de M., André, M. V. C., &amp; Geetha, S. R. (2026). <b>Industry 6.0: Coevolutionary production systems as an emerging frontier of industrial transformation.</b> 46th National Production Engineering Meeting (ENEGEP), São Paulo, SP, Brazil.</span></div>
+    <div class="pub"><span class="y">2026</span><span class="t">Santos, C. J. de M., André, M. V. C., &amp; Busin, J. V. (2026). <b>How is primary health care performance measured? A bibliometric and multivariate analysis of the literature from 2016 to 2023.</b> 46th ENEGEP, São Paulo, SP, Brazil.</span></div>
+    <div class="pub"><span class="y">2023</span><span class="t">André, M. V. C., Cavalcanti, I. A., Carmo, M. F. A. do, &amp; Oliveira, D. R. S. B. (2023). <b>Diagnosis of environmental management practices in an organization in the city of Salgueiro: A view based on reverse logistics.</b> 43rd ENEGEP, Fortaleza, CE, Brazil. (In Portuguese)</span></div>
+    <div class="pub"><span class="y">2023</span><span class="t">André, M. V. C., Santos, C. P. dos, &amp; Rocha, L. O. (2023). <b>Application of the risk map: A study in a paint industry.</b> 43rd ENEGEP, Fortaleza, CE, Brazil. (In Portuguese)</span></div>
+    <div class="pub"><span class="y">2023</span><span class="t">André, M. V. C., Nabôa, N. R., &amp; Souza, E. C. R. de. (2023). <b>Application of time-saving in a textile company in the city of Salgueiro – PE.</b> 43rd ENEGEP, Fortaleza, CE, Brazil. (In Portuguese)</span></div>
+    <div class="pub"><span class="y">2023</span><span class="t">André, M. V. C., Alves, J. T. S., Gomes, J. E. A. de L., Leite, W. W. P. dos A., &amp; Souza, E. C. R. de. (2023). <b>Application of economy of motion in a textile company in the city of Salgueiro – PE.</b> 43rd ENEGEP, Fortaleza, CE, Brazil. (In Portuguese)</span></div>
+    <div class="pub"><span class="y">2023</span><span class="t">André, M. V. C., Alves, J. T. S., Pereira, G. M., &amp; Silva, L. M. (2023). <b>Impacts of the lack of sanitation: A look at health, the environment and quality of life in Salgueiro, Pernambuco.</b> 1st International Congress of Interdisciplinary Environmental Education (CINEAI), Juazeiro, BA, Brazil. (In Portuguese)</span></div>
+    <div class="pub"><span class="y">2021</span><span class="t">André, M. V. C., Melo, F. G. O., Santos Junior, R. S., &amp; Carmo, M. F. A. (2021). <b>Overview of popular engineering approaches in the scope of production engineering.</b> 41st ENEGEP (online). (In Portuguese)</span></div>
+    <div class="pub"><span class="y">2020</span><span class="t">André, M. V. C., Carmo, M. F. A., Santos, M. F., Souza, M. B. B., &amp; Guerra, G. S. (2020). <b>Factors that influence women’s stay in STEM fields.</b> 1st National Congress on Interdisciplinary Language Studies, Salgueiro, PE, Brazil (online). (In Portuguese)</span></div>
+  </details>
+
+  <details>
+    <summary>Abstracts, posters and registered software</summary>
+    <div class="pub"><span class="y">2024</span><span class="t">André, M. V. de C., &amp; Silva, Y. L. T. V. (2024). <b>A heuristic local search approach to the boarding and disembarking gate assignment problem.</b> 56th Brazilian Operational Research Symposium (SBPO), Fortaleza, CE, Brazil. Poster. (In Portuguese)</span></div>
+    <div class="pub"><span class="y">2020–24</span><span class="t">Ten additional abstracts presented at the Teaching, Research and Extension Week (SCIENTEX), UNIVASF, on health care performance measurement, student retention, ergonomics, sustainability, Lean/5S training, and women in STEM. (In Portuguese)</span></div>
+    <div class="pub"><span class="y">2024</span><span class="t">André, M. V. de C., Silva, Y. L. T. V., &amp; Silva, H. L. R. da. (2024). <b>Local search algorithm for assigning nursing teams with personal preferences.</b> Certificate of Computer Program Registration, National Institute of Industrial Property (INPI), Brazil. (In Portuguese)</span></div>
+    <div class="pub"><span class="y">2022</span><span class="t">Bezerra, B. L. D., et al., including André, M. V. de C. (2022). <b>extrAIdados: A software tool for data extraction from documents.</b> Certificate of Computer Program Registration, INPI, Brazil (holder: Di2win Tecnologia LTDA).</span></div>
+  </details>
+</section>
+
+<!-- CV SUMMARY -->
+<section class="block" id="cv">
+  <div class="eyebrow">06 / cv</div>
+  <h2>CV at a glance</h2>
+  <div class="cols">
+    <div>
+      <div class="sub" style="margin-top:0">// education</div>
+      <div class="item"><div class="h">M.S., Industrial and Systems Engineering</div><div class="s">Binghamton University, NY, USA · Aug 2025 – Aug 2027 (expected)<br>GPA 3.87/4.00 · full tuition waiver and research assistantship<br>Thesis (in progress): applied continuous improvement in electronics manufacturing with Celestica Inc. · Advisor: Dr. Yingge Zhou</div></div>
+      <div class="item g"><div class="h">B.S., Industrial Engineering</div><div class="s">Federal University of the São Francisco Valley (UNIVASF), Brazil · Mar 2020 – Feb 2025<br>GPA 9.4/10.0 · Graduated with Honors (Academic Laureate)</div></div>
+
+      <div class="sub">// certifications</div>
+      <ul class="list">
+        <li><span class="d">2026</span><span><b>Lean Six Sigma Green Belt</b> Specialization</span></li>
+        <li><span class="d">2026</span><span>Generative AI with Large Language Models</span></li>
+        <li><span class="d">2026</span><span>Human Subjects Research Training</span></li>
+        <li><span class="d">2025</span><span>Design Thinking</span></li>
+      </ul>
+
+      <div class="sub">// teaching and outreach</div>
+      <ul class="list">
+        <li><span class="d">2022–2025</span><span><b>Founder and Research Director</b>, BI Undergraduate Academic Council, UNIVASF</span></li>
+        <li><span class="d">2022</span><span><b>Teaching Assistant</b>, Engineering Drawing, UNIVASF</span></li>
+        <li><span class="d">2021–2022</span><span><b>Member</b>, Sertanejas InsiSTEM (Women in STEM outreach, 500+ people reached)</span></li>
+        <li><span class="d">2021–2025</span><span>Workshops delivered: 5S and action plans, occupational health and safety tools, R from scratch, production management</span></li>
+      </ul>
+    </div>
+    <div>
+      <div class="sub" style="margin-top:0">// fellowships, scholarships and awards</div>
+      <ul class="list">
+        <li><span class="d">Aug 2026</span><span><b>Best of Site Award</b> (team), Celestica Inc.</span></li>
+        <li><span class="d">2025 – now</span><span><b>Full Tuition Waiver</b>, Dept. of ISE, Binghamton University</span></li>
+        <li><span class="d">2025 – now</span><span>Research Assistantships, Dept. of ISE (and Celestica Inc. from Aug 2026)</span></li>
+        <li><span class="d">2025</span><span><b>Graduation with Honors</b> (Academic Laureate), UNIVASF</span></li>
+        <li><span class="d">2024</span><span><b>1st Place</b>, Best Startup Competition, 2nd Hackathon Sertão Salgueiro (UPE)</span></li>
+        <li><span class="d">2024</span><span>Institutional Extension Scholarship (PIBEX), UNIVASF</span></li>
+        <li><span class="d">2023</span><span>Honorable Mentions: CINEAI (paper) and 16th SCIENTEX (abstract)</span></li>
+        <li><span class="d">2022</span><span>Student Development and Training Program (PRODESCAPE), UNIVASF</span></li>
+        <li><span class="d">2021</span><span>Technological Extension Program (PET), FACEPE</span></li>
+        <li><span class="d">2020–21</span><span>Academic Incentive Scholarship (BIA), FACEPE</span></li>
+      </ul>
+
+      <div class="sub">// relevant coursework</div>
+      <p style="font-size:14.5px;line-height:1.65;color:var(--gray);margin:0 0 12px"><b style="color:var(--ink)">Graduate:</b> Operations Research; Integer Programming; Modeling and Simulation; Applied Multivariate Data Analysis; ISE in Healthcare; Enterprise Systems Engineering; Principles of Systems Engineering; Generative AI and Large Language Models; Foundations of Neural Networks (in progress).</p>
+      <p style="font-size:14.5px;line-height:1.65;color:var(--gray);margin:0"><b style="color:var(--ink)">Undergraduate:</b> Operations Research I and II; Numerical Analysis; Statistics for Industrial Engineering; Statistical Quality Control; Quality Management; Method Engineering; Factory Design; Simulation of Production Processes; Production Planning and Control I and II.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="big">Let's talk research<i>_</i></div>
+  <div class="links">
+    <a href="mailto:mcarvalhoand@binghamton.edu">email</a>
+    <a href="https://www.linkedin.com/in/maria-andre-/" rel="noopener">linkedin</a>
+    <a href="https://github.com/MariaValeriaa" rel="noopener">github</a>
+    <a href="assets/CV_Maria_Andre.pdf">cv.pdf</a>
+  </div>
+</section>
+<div class="foot">© 2026 M. V. C. Andre · Binghamton University</div>
+
+</div>
+</body>
+</html>
